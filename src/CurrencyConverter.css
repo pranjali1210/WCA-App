@@ -2,13 +2,15 @@ body {
   font-family: Arial, sans-serif;
   color: #555;
   overflow-y: auto;
-  background: linear-gradient(135deg, #ffdd57, #ffa801, #7bed9f, #00d2ff);
-  animation: moving-background 20s linear infinite;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  background-image: url('/public/currency.avif'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
 }
+
 
 .container {
   display: flex;

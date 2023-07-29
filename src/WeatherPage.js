@@ -16,7 +16,7 @@ const WeatherPage = () => {
     setIsLoading(true);
     try {
       const response = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=f926831d320fcd0fb12393dff1881e90&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=810fb64c4c575f5e64a01d2cbeefb255&units=metric`
       );
       setWeatherData(response.data);
     } catch (error) {
@@ -24,9 +24,30 @@ const WeatherPage = () => {
     }
     setIsLoading(false);
   };
+  let weatherPageClass = "weather-page"; 
+ 
+  if (weatherData) {
+    const weatherCondition = weatherData.weather[0].main.toLowerCase();
+    if (weatherCondition === "clear") {
+      weatherPageClass += " weather-page-sunny";
+    } else if (weatherCondition === "clouds") {
+      weatherPageClass += " weather-page-cloudy";
+    } else if (weatherCondition === "rain") {
+      weatherPageClass += " weather-page-rainy";
+    } else if (weatherCondition === "snow") {
+      weatherPageClass += " weather-page-snowy";
+    } else if (weatherCondition === "mist") {
+      weatherPageClass += " weather-page-mist";
+    }
+    
+  } else {
+   
+    weatherPageClass += " weather-page-default";
+  }
 
   return (
-    <div className="weather-page">
+    <div className={weatherPageClass}>
+  
       {/* Navigation */}
       <nav>
         <ul className="nav-links">

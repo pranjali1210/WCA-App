@@ -8,12 +8,39 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #ff69b4, #8a2be2, #00bfff);
   background-size: cover;
-  animation: moving-background 20s ease infinite;
-  color: #000;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
+.weather-page-default {
+  
+  background-image: url('/public/weather.jpg');
+  
+}
+.weather-page-no-currency {
+  background: none;
+}
+
+.weather-page-sunny {
+  background-image: url('/public/sunny.avif'); 
+}
+
+.weather-page-cloudy {
+  background-image: url('/public/cloudy.jpg'); 
+}
+
+.weather-page-rainy {
+  background-image: url('/public/rainy.jpg'); 
+}
+
+.weather-page-snowy {
+  background-image: url('/public/snow.jpg'); 
+}
+
+.weather-page-mist {
+  background-image: url('/public/mist.jpg'); 
+}
 
 @keyframes moving-background {
   0% {
@@ -30,6 +57,7 @@
 .weather-page h2 {
   font-size: 24px;
   margin-bottom: 20px;
+  color: aliceblue;
 }
 
 .search-container {
@@ -37,7 +65,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  gap: 10px; /* Add spacing between elements */
+  gap: 10px; 
 }
 
 .search-container input[type='text'] {
@@ -58,7 +86,7 @@
 
 .weather-content {
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: white;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -79,7 +107,7 @@
   width: 50px;
   height: 50px;
   margin-top: 10px;
-  filter: invert(1); /* Add this line to invert the color of the image */
+  filter: invert(1); 
 }
 
 .nav-links {
