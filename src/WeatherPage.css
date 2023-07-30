@@ -42,6 +42,10 @@
   background-image: url('/public/mist.jpg'); 
 }
 
+.weather-page-haze {
+  background-image: url('/public/mist.jpg'); 
+}
+
 @keyframes moving-background {
   0% {
     background-position: 0% 50%;
