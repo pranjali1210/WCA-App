@@ -38,6 +38,8 @@ const WeatherPage = () => {
       weatherPageClass += " weather-page-snowy";
     } else if (weatherCondition === "mist") {
       weatherPageClass += " weather-page-mist";
+    } else if (weatherCondition === "haze") {
+      weatherPageClass += " weather-page-haze";
     }
     
   } else {
