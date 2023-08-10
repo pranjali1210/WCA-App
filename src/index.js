@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { init as initApm } from "@elastic/apm-rum";
 
-var apm = initApm({
+initApm({
   serviceName: 'my-service-name',
 
   serverUrl: 'https://6687db2a719043c78ac20f7343d2eb11.apm.us-central1.gcp.cloud.es.io:443',
